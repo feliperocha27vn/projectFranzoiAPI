@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model top10 {
+  id        Int     @id @default(autoincrement())
+  sku       String  @db.Text
+  resumo    String  @db.Text
+  img       String  @db.Text
+  descricao String? @db.Text
+}
+
+model top10brincos {
+  id        Int     @id @default(autoincrement())
+  sku       String  @db.Text
+  resumo    String  @db.Text
+  img       String  @db.Text
+  descricao String? @db.Text
+}
+
+model top10pulseiras {
+  id        Int     @id @default(autoincrement())
+  sku       String  @db.Text
+  resumo    String  @db.Text
+  img       String  @db.Text
+  descricao String? @db.Text
+}
+
+model top10correntes {
+  id        Int     @id @default(autoincrement())
+  sku       String  @db.Text
+  resumo    String  @db.Text
+  img       String  @db.Text
+  descricao String? @db.Text
+}
